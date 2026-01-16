@@ -18,6 +18,8 @@ struct ContentView: View {
                 OnboardingView()
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Theme.background.ignoresSafeArea())
         .animation(.easeInOut(duration: 0.5), value: viewModel.settings.hasCompletedOnboarding)
     }
 }
